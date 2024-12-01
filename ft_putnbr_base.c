@@ -6,15 +6,15 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:20:23 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/01 20:37:15 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:05:04 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	_ft_putnbr_base(int nbr, char *base, int len)
+static void	_ft_putnbr_base(long long nbr, char *base, size_t len)
 {
-	int	mod;
+	long long	mod;
 
 	if (nbr > 0)
 	{
@@ -25,7 +25,7 @@ static void	_ft_putnbr_base(int nbr, char *base, int len)
 	}
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(long long nbr, char *base)
 {
 	if (nbr == -2147483648)
 	{

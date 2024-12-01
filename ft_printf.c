@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:24:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/01 20:40:23 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/01 23:11:56 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ void ft_printf(char *format, ...)
       else if (format[i] == 'X')
         ft_putnbr_base(va_arg(va, int), "0123456789ABCDEF");
       else if (format[i] == 'p')
-        ft_putnbr_base(va_arg(va, int), "0123456789abcdef");
+      {
+        ft_putstr_fd("0x", 1);
+        ft_putnbr_base(va_arg(va, unsigned long), "0123456789abcdef");
+      }
       else if (format[i] == 'u')
         ft_putnbr_fd(va_arg(va, unsigned int), 1);
       else if (format[i] == 'i')
