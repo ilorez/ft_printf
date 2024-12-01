@@ -6,13 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:54:16 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 11:48:26 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/01 20:37:40 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-//#include <fcntl.h>
+#include "ft_printf.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -20,8 +18,3 @@ void	ft_putchar_fd(char c, int fd)
 		write(fd, &c, 1);
 }
 
-/*int main ()
-{
-	write(1, "a", 1);
-  return (0);
-}*/

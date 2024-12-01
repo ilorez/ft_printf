@@ -6,11 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:29:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 15:48:54 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/01 20:38:08 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -19,9 +19,3 @@ void	ft_putstr_fd(char *s, int fd)
 	while (*(s))
 		ft_putchar_fd(*s++, fd);
 }
-
-/*int main()
-{
-	ft_putstr_fd("Hello World", 1);
-	return (0);
-}*/
