@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:24:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/02 16:23:26 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:41:19 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ static int	ft_print_type(char type, va_list va)
 	else if (type == 'X')
 		return (ft_print_hexa(va_arg(va, unsigned int), "0123456789ABCDEF"));
 	else if (type == 'p')
-	  return (ft_print_ptr(va_arg(va, unsigned long)));
-  return (ft_print_char(type));
+		return (ft_print_ptr(va_arg(va, unsigned long)));
+	return (ft_print_char(type));
 }
 
 int	ft_printf(const char *format, ...)
