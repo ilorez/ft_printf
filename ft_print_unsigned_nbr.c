@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_print_unsigned_nbr.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:29:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/01 20:38:08 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/02 15:23:43 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/02 16:16:10 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_print_unsigned_nbr(unsigned int n)
 {
-	if (!s || fd == -1)
-		return ;
-	while (*(s))
-		ft_putchar_fd(*s++, fd);
+	int	out_len;
+
+	out_len = 0;
+	if (n >= 10)
+	{
+		out_len += ft_print_unsigned_nbr(n / 10);
+		out_len += ft_print_char(n % 10 + '0');
+	}
+	else
+		out_len += ft_print_char(n + '0');
+	return (out_len);
 }

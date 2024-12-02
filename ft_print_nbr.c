@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:57:58 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/01 20:37:58 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/02 15:18:16 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/02 16:17:29 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_print_nbr(int nbr)
 {
-	if (fd == -1)
-		return ;
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-		ft_putnbr_fd(n, fd);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + 48, fd);
-	}
-	else
-		ft_putchar_fd(n + 48, fd);
-}
+	long	n;
+	int		out_len;
 
-/*int main(int ac, char **av)
-{
-  if (ac == 3)
-	ft_putnbr_fd(ft_atoi(av[1]), ft_atoi(av[2]));
-  return (0);
-}*/
+	n = nbr;
+	out_len = 0;
+	if (n < 0)
+	{
+		out_len += ft_print_char('-');
+		n = -n;
+	}
+	if (n >= 10)
+		out_len += ft_print_nbr(n / 10);
+	out_len += ft_print_char(n % 10 + 48);
+	return (out_len);
+}

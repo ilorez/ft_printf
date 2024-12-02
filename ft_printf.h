@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 20:25:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/01 23:06:56 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/02 15:44:49 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/02 15:48:48 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,18 @@
 # define FT_PRINTF_H
 
 // includes
-# include <stdlib.h>
-# include <unistd.h>
-# include <stddef.h>
-# include <stdint.h>
-# include <stdio.h>
 # include <stdarg.h>
+# include <stddef.h>
+# include <stdio.h>
+# include <unistd.h>
 
-// string functions
-//size_t				ft_strlen(const char *s);
-// put functions
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
-void				ft_putnbr_base(long long nbr, char *base);
-
-// ft_printf
-void ft_printf(char *format, ...);
+// used functions
+int	ft_printf(const char *format, ...);
+int	ft_print_char(int c);
+int	ft_print_nbr(int nbr);
+int	ft_print_str(char *str);
+int	ft_print_ptr(unsigned long n);
+int	ft_print_unsigned_nbr(unsigned int n);
+int	ft_print_hexa(unsigned long nbr, char *base);
 
 #endif
