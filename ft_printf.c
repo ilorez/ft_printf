@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:24:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/02 16:41:19 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/03 10:32:11 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,12 @@ int	ft_printf(const char *format, ...)
 	out_len = 0;
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format+1))
 			out_len += ft_print_type(*(++format), va);
-		else
+		else if(*format != '%')
 			out_len += ft_print_char(*format);
+		else
+			return (-1);
 		format++;
 	}
 	va_end(va);
