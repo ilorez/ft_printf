@@ -16,18 +16,41 @@ int main(void)
     // Test 2: Invalid format string
     ret_ft = ft_printf("Test 2: Invalid format: %q\n");
     ret_orig = printf("Test 2: Invalid format: %q\n");
-    /*ret_orig = printf("Test 2: Invalid format: %P\n");
-    ret_orig = printf("Test 2: Invalid format: %:\n");
-    ret_orig = printf("Test 2: Invalid format: %M\n");
-    ret_orig = printf("Test 2: Invalid format: %1\n");
-    ret_orig = printf("Test 2: Invalid format: %$\n");
-    ret_orig = printf("Test 2: Invalid format: %q\n");
-    ret_orig = printf("Test 2: Invalid format: %h\n");
-    ret_orig = printf("Test 2: Invalid format: %q\n");
-    ret_orig = printf("Test 2: Invalid format: %Q\n");*/
-
     printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
 
+    ret_ft = ft_printf("Test 2: Invalid format: %P\n");
+    ret_orig = printf("Test 2: Invalid format: %P\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %:\n");
+    ret_orig = printf("Test 2: Invalid format: %:\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %M\n");
+    ret_orig = printf("Test 2: Invalid format: %M\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %1\n");
+    ret_orig = printf("Test 2: Invalid format: %1\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %$\n");
+    ret_orig = printf("Test 2: Invalid format: %$\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %q\n");
+    ret_orig = printf("Test 2: Invalid format: %q\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %h\n");
+    ret_orig = printf("Test 2: Invalid format: %h\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    ret_ft = ft_printf("Test 2: Invalid format: %Q\n");
+    ret_orig = printf("Test 2: Invalid format: %Q\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
+    // Test 3.1
     ret_ft = ft_printf("Test 3.1: Only persentage: %");
     printf("\n");
     ret_orig = printf("Test 3.1: Only persentage: %");
@@ -45,11 +68,6 @@ int main(void)
     // Test 4: Nested format specifiers (intentional misuse)
     ret_ft = ft_printf("Test 4: Nested: %% %%%c%%\n", 'N');
     ret_orig = printf("Test 4: Nested: %% %%%c%%\n", 'N');
-    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
-
-    // Test 5: Complex alignment and mixed types
-    ret_ft = ft_printf("Test 5: %-10s | %10d | %04x | %p\n", "Align", 42, 255, &var);
-    ret_orig = printf("Test 5: %-10s | %10d | %04x | %p\n", "Align", 42, 255, &var);
     printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
 
     return 0;
