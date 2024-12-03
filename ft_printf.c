@@ -42,9 +42,9 @@ int	ft_printf(const char *format, ...)
 	out_len = 0;
 	while (*format)
 	{
-		if (*format == '%' && *(format+1))
+		if (*format == '%' && *(format + 1))
 			out_len += ft_print_type(*(++format), va);
-		else if(*format != '%')
+		else if (*format != '%')
 			out_len += ft_print_char(*format);
 		else
 			return (-1);
