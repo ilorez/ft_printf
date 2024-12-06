@@ -16,8 +16,8 @@ int main(void)
     printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
 
     // Test 2: Invalid format string
-    ret_ft = ft_printf("Test 2: Invalid format: %q\n");
-    ret_orig = printf("Test 2: Invalid format: %q\n");
+    ret_ft = ft_printf("Test 2: Invalid format: %w\n");
+    ret_orig = printf("Test 2: Invalid format: %w\n");
     printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
 
     ret_ft = ft_printf("Test 2: Invalid format: %P\n");

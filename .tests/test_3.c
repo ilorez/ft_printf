@@ -40,21 +40,22 @@ void intToStr(int num, char *str) {
 
 int main()
 {
-	/*int d;
+	int d;
 	char str[20];
 
 	close(1);
-	d = ft_printf("hello%s", " world");
+	setvbuf(stdout, NULL, _IONBF, 0);
+	d = printf("hello\nuuu%s", " world");
 	intToStr(d, str);
 	int i = 0;
 	while(str[i])
 		write(2, &str[i++],1);
-	*/
+	
 	//printf("hello ");
 	//printf("world");
-	printf("hello\n");
-	fflush(stdout);
-	write(1, "w", 1);
+	//printf("hello\n");
+	//fflush(stdout);
+	//write(1, "w", 1);
 }
 
 
