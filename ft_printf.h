@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:44:49 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/02 15:48:48 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:58:17 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printf(const char *format, ...);
 int	ft_print_char(int c);
 int	ft_print_nbr(int nbr);
 int	ft_print_str(char *str);
-int	ft_print_ptr(unsigned long n);
+int	ft_print_ptr(void *n);
 int	ft_print_unsigned_nbr(unsigned int n);
 int	ft_print_hexa(unsigned long nbr, char *base);
 
