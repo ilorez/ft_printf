@@ -6,6 +6,8 @@ int main(void)
     int ret_ft, ret_orig;
     int var = 42;
 
+    ft_printf("***********this test here not all but most of it not required");
+    ft_printf("so this test is trush ***********\n");
     // Test 1: Mixed format with edge cases
     ret_ft = ft_printf("Test 1: Mixed: Char: %c, String: %s, Int: %d, Hex: %x, Ptr: %p, Percent: %%\n", 
                         'Z', NULL, -2147483648, 4294967295, &var);
@@ -49,6 +51,12 @@ int main(void)
     ret_ft = ft_printf("Test 2: Invalid format: %Q\n");
     ret_orig = printf("Test 2: Invalid format: %Q\n");
     printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+    
+    
+    ret_ft = ft_printf("Test 2: %%%%%%%%%%%%%\n");
+    ret_orig = printf("Test 2: %%%%%%%%%%%%%\n");
+    printf("Return values: ft_printf = %d, printf = %d\n\n", ret_ft, ret_orig);
+
 
     // Test 3.1
     ret_ft = ft_printf("Test 3.1: Only persentage: %");
